@@ -17,17 +17,17 @@
 <h2>Stages</h2>
 
 A-Record Exercise
-- Connect/log into Client-1 as an admin (mydomain\john_admin)
-- Create a DNS A-record on DC-1 for “mainframe” and have it point to DC-1’s Private IP address
-- Go to Client-1 and try to ping it. Observe that it works
+- Log into Client-1 as an admin (mydomain\john_admin)
+- Create a DNS A-record
+- Ping Client-1 to confirm connectivity
 
 
 Local DNS Cache Exercise
-- Go back to DC-1 and change mainframe’s record address to 8.8.8.8
-- Go back to Client-1 and ping “mainframe” again. Observe that it still pings the old address
-- Observe the local dns cache (ipconfig /displaydns)
-- Flush the DNS cache (ipconfig /flushdns). Observe that the cache is empty
-- Attempt to ping “mainframe” again. Observe the address of the new record is showing up
+- Change the mainframe’s record address to 8.8.8.8
+- Observe that the old address still exists by using the ping command
+- Observe the local dns cache by using the (ipconfig /displaydns)
+- Use the (ipconfig /flushdns) command to flush the DNS cache.
+- Ping the "mainframe" to observe that a new address exists
 
 <h2></h2>
 <h2>A-Record Exercise
